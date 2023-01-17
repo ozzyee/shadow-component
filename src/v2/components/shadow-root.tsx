@@ -19,14 +19,17 @@ export const ShadowRoot = ({children, isIsolated}: any) => {
         bootstrapLink.href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css';
 
 
+        host.appendChild(link);
+        host.appendChild(bootstrapLink);
+        
         if (isIsolated) {
             host.attachShadow({mode: "open"});
             host.shadowRoot.innerHTML = host.innerHTML;
             host.innerHTML = "";
-        }
 
-        host.appendChild(link);
-        host.appendChild(bootstrapLink);
+            host.appendChild(link);
+            host.appendChild(bootstrapLink);
+        }
     }
 
     return (
