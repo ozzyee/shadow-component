@@ -6,17 +6,18 @@ export const ShadowRoot = ({children, styles, isIsolated}: any) => {
             return;
         }
 
-        const style = document.createElement('style');
-        style.textContent = styles;
-        host.appendChild(style);
-
-
         if (isIsolated) {
             host.attachShadow({mode: "open"});
             host.shadowRoot.innerHTML = host.innerHTML;
             host.innerHTML = "";
         }
 
+
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = '/styles/main.css';
+        host.appendChild(link);
     }
 
     return (

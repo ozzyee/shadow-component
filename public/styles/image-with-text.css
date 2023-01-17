@@ -1,0 +1,18 @@
+.container {
+    background-color: black !important;
+    border-radius: 22px;
+}
+
+
+.stockImage {
+    border-top-right-radius: 22px;
+    border-top-left-radius: 22px;
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: white;
+}
