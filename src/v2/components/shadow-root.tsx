@@ -6,18 +6,27 @@ export const ShadowRoot = ({children, isIsolated}: any) => {
             return;
         }
 
+        // default styles
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
         link.href = '/styles/main.css';
-        host.appendChild(link);
+
+        // bootstrap styles
+        const bootstrapLink = document.createElement('link');
+        bootstrapLink.rel = 'stylesheet';
+        bootstrapLink.type = 'text/css';
+        bootstrapLink.href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css';
+
 
         if (isIsolated) {
             host.attachShadow({mode: "open"});
             host.shadowRoot.innerHTML = host.innerHTML;
             host.innerHTML = "";
-            host.appendChild(link);
         }
+
+        host.appendChild(link);
+        host.appendChild(bootstrapLink);
     }
 
     return (
