@@ -1,12 +1,16 @@
 .container {
-    /*background-color: black !important;*/
+    background-color: black !important;
     border-radius: 22px;
+    padding: 0 !important;
+    margin: 0;
+    color: white;
 }
 
 
 .stockImage {
     border-top-right-radius: 22px;
     border-top-left-radius: 22px;
+    width: 100%;
 }
 
 .heading {
