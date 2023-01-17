@@ -1,18 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {ShadowRoot} from "./components/shadow-root";
+import {MainApp} from "./v2/main";
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <ShadowRoot isIsolated={false}>
-            <App/>
-        </ShadowRoot>
+        <MainApp.RenderComponent/>
     </React.StrictMode>
 );
 

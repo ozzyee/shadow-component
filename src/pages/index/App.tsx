@@ -1,5 +1,5 @@
 import React from 'react';
-import {ImageWithText} from './components/image-with-text';
+import {ImageWithText} from '../../components/image-with-text';
 
 function App() {
     return (
